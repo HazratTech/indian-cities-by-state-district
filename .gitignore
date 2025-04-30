@@ -1,0 +1,19 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Cache and environment files
+cache.json
+.env
+cache.py
+
+# Local JSON data files you don't want to commit
+cities.json
+districts.json
+cities.json
+
+# Main scripts not meant for public use
+main.py
+city.py

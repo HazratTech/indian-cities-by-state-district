@@ -21,4 +21,12 @@ This project provides a structured JSON file (`combined_data.json`) containing I
     "Chennai": ["Chennai", "Avadi"]
   }
 }
-# indian-cities-by-state-district
+```
+
+## ☕ Support This Project
+
+If this project helped you, consider supporting me:
+
+[![Buy Me a Coffee](https://media.discordapp.net/attachments/659261445523111957/1367011496634093608/bmc-button.png?ex=6813082a&is=6811b6aa&hm=2383aa227bb9d618b888c8fffd50176ec157af785fefcda5d67cb16510ae4858&=&format=webp&quality=lossless)](https://www.buymeacoffee.com/hazratummar)
+
+
