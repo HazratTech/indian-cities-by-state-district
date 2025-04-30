@@ -5,6 +5,7 @@ __pycache__/
 *.pyd
 
 # Cache and environment files
+.venv
 cache.json
 .env
 cache.py
