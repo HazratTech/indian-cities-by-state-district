@@ -10,13 +10,3 @@ cache.json
 .env
 cache.py
 sort.py
-
-# Local JSON data files you don't want to commit
-cities.json
-districts.json
-cities.json
-combined_data copy.json
-
-# Main scripts not meant for public use
-main.py
-city.py
