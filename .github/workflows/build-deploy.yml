@@ -22,7 +22,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/indian-address:v1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/indian-address:latest
 
   deploy:
     runs-on: self-hosted
@@ -31,13 +31,15 @@ jobs:
     steps:
       - name: Pull and restart container
         run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/indian-address:v1
-          
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/indian-address:latest
+
           docker stop indian-adress || true
           docker rm indian-adress || true
 
-          # Tag the image locally so the exact command can be run
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/indian-address:v1 indian_address:v1
-
-          # Your exact command
-          docker run -d --name indian-adress --restart unless-stopped --network custom_bridge --ip 172.25.0.12 -p 8282:8282 indian_address:v1
+          docker run -d \
+            --name indian-adress \
+            --restart unless-stopped \
+            --network custom_bridge \
+            --ip 172.25.0.12 \
+            -p 8282:8282 \
+            ${{ secrets.DOCKERHUB_USERNAME }}/indian-address:latest
